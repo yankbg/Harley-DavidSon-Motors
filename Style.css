@@ -719,6 +719,7 @@ li {
   
   .timepic {
     height: 180px;
+    width: 100%;
   }
 }
 
@@ -749,7 +750,7 @@ li {
   
   .timepic {
     height: 170px;
-    width: 390px;
+    width: 100%;
   }
   .firstpara{
     width: 95%;
