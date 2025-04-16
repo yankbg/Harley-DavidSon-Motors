@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Rectangle -->
+  <rect width="24" height="24" fill="#1A2930" />
+  <!-- White Arrow (Moved Down Slightly) -->
+  <path d="m14 18 4-4-4-4" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 14H6" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>

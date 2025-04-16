@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Original Styles (unchanged) */
+.hdlogo {
+  width: 30px;
+  height: 20px;
+  margin-top: 25px;
+}
+.logo {
+  display: flex;
+  gap: 20px;
+}
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  background-color: #003366;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 3;
+  padding: 10px 0;
+}
+.list-navbar {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  gap: 30px;
+}
+.list-navbar a {
+  text-decoration: none;
+  color: white;
+}
+.list-navbar a:hover {
+  color: #1A2930;
+}
+li {
+  list-style: none;
+}
+.icon-search {
+  width: 15px;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+.input-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  width: 200px;
+  height: 25px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border-width: 1px;
+  z-index: 20;
+}
+.nav1 {
+  position: relative;
+}
+.nav1 a {
+  text-decoration: none;
+  display: block;
+}
+.dropdown1 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  backdrop-filter: blur(10px); 
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.dropdown1 a {
+  padding: 10px;
+  color: black;
+  display: block;
+}
+.dropdown1 a:hover {
+  background: #555;
+}
+.nav1:hover .dropdown1 {
+  display: block;
+}
+
+/* Responsive Additions */
+@media (min-width: 577px) {
+  /* Hide mobile menu toggle on desktop */
+  .menu-toggle, .menu-label {
+    display: none !important;
+  }
+  
+  /* Ensure desktop nav is visible */
+  .list-navbar {
+    display: flex !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+  
+  .navbar {
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .list-navbar {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .search-dropdown {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo h2 {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+  
+  .list-navbar {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .input-dropdown {
+    right: 20px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    gap: 10px;
+  }
+  
+  .hdlogo {
+    margin-top: 20px;
+    width: 25px;
+    height: 15px;
+  }
+  
+  /* Mobile menu styles */
+  .list-navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    display: none; /* Hidden by default on mobile */
+  }
+  
+  /* Show hamburger only on mobile */
+  .menu-toggle {
+    display: none; /* Hide actual checkbox */
+  }
+  
+  .menu-label {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    order: 1;
+    padding: 10px;
+    margin-left: auto; /* Push to right side */
+  }
+  
+  .menu-toggle:checked ~ .navbar .list-navbar {
+    display: flex; /* Show menu when checked */
+    max-height: 500px;
+    padding: 10px 0;
+  }
+  
+  /* Adjust dropdown for mobile */
+  .nav1:hover .dropdown1 {
+    position: static;
+    box-shadow: none;
+    backdrop-filter: none;
+    display: none;
+  }
+  
+  .nav1:focus-within .dropdown1,
+  .nav1:active .dropdown1 {
+    display: block;
+  }
+  
+  /* Hamburger icon */
+  .menu-label::before {
+    content: "☰";
+  }
+  
+  .menu-toggle:checked + .menu-label::before {
+    content: "✕";
+  }
+  
+  /* Make logo and hamburger appear on same line */
+  .logo {
+    order: -1;
+    flex-grow: 1;
+  }
+  
+  .search-dropdown {
+    order: 0;
+  }
+}
+</style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-label"></label>
+        <div class="logo">
+            <img src="icon/hdlogo.jpg" alt="" class="hdlogo">
+            <h2>yannick motobike</h2>
+        </div>
+        <div class="navbar">
+            <ul class="list-navbar">
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li>
+                    <div class="nav1">
+                        <a href="./Gallery.html">Gallery</a>
+                        <div class="dropdown1">
+                            <a href="./Gallery.html#h2title">Cruiser</a>
+                            <a href="./Gallery.html#sport">Sport</a>
+                            <a href="./Gallery.html#trike">Trike</a>
+                            <a href="./Gallery.html#adventure">Adventure Touring</a>
+                            <a href="./Gallery.html#American">Grand American Touring</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="search-dropdown">
+            
+                <a id="btndropdown" class="btndropdown">
+                    <img src="icon/search-svgrepo-com.svg" alt="" class="icon-search">
+                </a>
+                <input type="text" placeholder="Search" class="input-dropdown" id="input-dropdown">
+            
+        </div>
+    </header>
+    <script>
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-label"></label>
+        <div class="logo">
+            <img src="icon/hdlogo.jpg" alt="" class="hdlogo">
+            <h2>yannick motobike</h2>
+        </div>
+        <div class="navbar">
+            <ul class="list-navbar">
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li>
+                    <div class="nav1">
+                        <a href="./Gallery.html">Gallery</a>
+                        <div class="dropdown1">
+                            <a href="./Gallery.html#h2title">Cruiser</a>
+                            <a href="./Gallery.html#sport">Sport</a>
+                            <a href="./Gallery.html#trike">Trike</a>
+                            <a href="./Gallery.html#adventure">Adventure Touring</a>
+                            <a href="./Gallery.html#American">Grand American Touring</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="search-dropdown">
+            
+                <a id="btndropdown" class="btndropdown">
+                    <img src="icon/search-svgrepo-com.svg" alt="" class="icon-search">
+                </a>
+                <input type="text" placeholder="Search" class="input-dropdown" id="input-dropdown">
+            
+        </div>
+    </header>
+    <div class="headpart">
+        <img src="image/Gallery.webp" alt="" class="picCruiser">
+    </div>
+    <h1 class="h2title" id="h2title">THE CRUISER LINEUP</h1>
+    <div class="containerCard">
+        <div class="card">
+            <a onclick="navigateToDetail('fatBoy')" class="product-link">
+                <h3>FAT BOY</h3>
+                <img src="image/fatBoy.webp" alt="" class="cardpic">
+            </a>
+        </div>
+        <div class="card">
+            <a onclick="navigateToDetail('heritage')" class="product-link">
+                <h3>HERITAGE</h3>
+                <img src="image/Heritage.webp" alt="" class="cardpic">
+            </a>
+        </div>
+        <div class="card">
+            <a onclick="navigateToDetail('lowrider')" class="product-link">
+                <h3>LOW RIDER</h3>
+                <img src="image/LowRider.webp" alt="" class="cardpic">
+            </a>
+        </div>
+        <div class="card">
+            <h3>LOWER RIDER ST</h3>
+            <img src="image/LowRIderSt.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>STREET BOOB</h3>
+            <img src="image/streetBoob.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>FAT BOY</h3>
+            <img src="image/fatBoy.webp" alt="" class="cardpic">
+            
+        </div>
+    </div>
+    <h1 class="h2title" id="sport">THE SPORT LINEUP</h1>
+    <div class="containerCard">
+        <div class="card">
+            <h3>NIGHTSTER</h3>
+            <img src="image/nightster.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>NIGHTSTER SPECIAL</h3>
+            <img src="image/nightsterspecial.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>SPORTSTER S</h3>
+            <img src="image/sportster s.webp" alt="" class="cardpic">
+            
+        </div>
+        
+    </div>
+    <h1 class="h2title" id="trike">THE TRIKE LINEUP</h1>
+    <div class="containerCard">
+        <div class="card">
+            <h3>FREEWHEELER</h3>
+            <img src="image/freewheeler.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>TRI GLIDE ULTRA</h3>
+            <img src="image/triglideultra.webp" alt="" class="cardpic">
+            
+        </div>
+        
+    </div>
+    <h1 class="h2title" id="adventure">THE ADVENTURE TOURING LINEUP</h1>
+    <div class="containerCard">
+        <div class="card">
+            <h3>CVO PAN AMERICA</h3>
+            <img src="image/cvo-pan-america-m35lb-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>PAN AMERICA 1250 SPECIAL</h3>
+            <img src="image/panamerica1250special.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>PAN AMERICA 1250</h3>
+            <img src="image/panamerica1250st.webp" alt="" class="cardpic">
+            
+        </div>
+        
+    </div>
+    <h1 class="h2title" id="American">THE GRAND AMERICAN TOURING LINEUP</h1>
+    <div class="containerCard">
+        <div class="card">
+            <h3>CVO STREET GLIDE</h3>
+            <img src="image/2025-cvo-street-glide-m32-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>CVO PAN ROAD GLIDE</h3>
+            <img src="image/2025-cvo-road-glide-m30-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>CVO ROAD GLIDE ST</h3>
+            <img src="image/2025-cvo-road-glide-st-m34b-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>ROAD GLIDE</h3>
+            <img src="image/2025-road-glide-f87-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>ROAD KING SPECIAL</h3>
+            <img src="image/2025-road-king-special-m12b-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>STREET GLIDE</h3>
+            <img src="image/2025-street-glide-m57-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        <div class="card">
+            <h3>STREET GLIDE ULTRA</h3>
+            <img src="image/2025-street-glide-ultra-m13-motorcycle.webp" alt="" class="cardpic">
+            
+        </div>
+        
+    </div>
+    <footer class="harley-footer">
+        <div class="footer-container">
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html" class="footer-link">Home</a></li>
+                    <li><a href="./timeline.html" class="footer-link">Timeline</a></li>
+                    <li><a href="./Gallery.html" class="footer-link">Gallery</a></li>
+                    <li><a href="./about.html" class="footer-link">About</a></li>
+                    <li><a href="./contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="./faq.html" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+    
+            
+            <div class="footer-section brand-section">
+                <img src="icon/hdlogo.jpg" alt="Harley Davidson Logo" class="brand-logo">
+                <h1 class="brand-title">HARLEY DAVIDSON</h1>
+                <p class="brand-slogan">Live Your Legend</p>
+            </div>
+    
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="Google"><i class="bi bi-google"></i></a>
+                <a href="#" class="social-link" aria-label="Snapchat"><i class="bi bi-snapchat"></i></a>
+            </div>
+            <p class="copyright">Copyright © 2025 Yaan KBG. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function navigateToDetail(productId) {
+            
+            localStorage.setItem('selectedProduct', productId);
+            
+            window.location.href = 'Gallerydetail.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
